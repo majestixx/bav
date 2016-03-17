@@ -196,7 +196,7 @@ class FileDataBackend extends DataBackend
         $parser     = new FileParser($file);
         $lastBankID = $parser->getBankID($parser->getLines());
         if ($lastBankID < 80000000) {
-            $this->sortFile($file);
+            //$this->sortFile($file);
 
         }
 

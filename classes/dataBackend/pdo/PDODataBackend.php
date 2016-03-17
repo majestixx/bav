@@ -135,6 +135,7 @@ class PDODataBackend extends SQLDataBackend
         try {
             $fileUtil = new FileUtil();
             $fileBackend = new FileDataBackend(tempnam($fileUtil->getTempDirectory(), 'bav'));
+            //$fileBackend = new FileDataBackend('E:\xampp\htdocs\sepatool\external\bav\data\blz_2016_03_07_txt.txt');
             $fileBackend->install();
 
             $insertBank     = $this->pdo->prepare(
@@ -203,7 +204,7 @@ class PDODataBackend extends SQLDataBackend
                 $useTA = false;
 
             }
-            $fileBackend->uninstall();
+            //$fileBackend->uninstall();
 
         } catch (Exception $e) {
             try {
