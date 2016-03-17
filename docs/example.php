@@ -11,7 +11,7 @@
  * @see BAV
  */
 
-require_once __DIR__ . "/../vendor/autoload.php";
+require_once __DIR__ . "/../autoloader/autoloader.php";
 
 use malkusch\bav\BAV;
 
@@ -78,10 +78,11 @@ try {
      * 
      * @see ConfigurationRegistry
      */
-    $backendContainer = new PDODataBackendContainer(
-        new \PDO('sqlite::memory:')
-    );
-    $backend = $backendContainer->getDataBackend();
+//     $backendContainer = new PDODataBackendContainer(
+//         new \PDO('sqlite::memory:')
+//     );
+//     $backend = $backendContainer->getDataBackend();
+	$backend = $bav->getDataBackend();
 
     /**
      * We can use an arbitrary SQL statement to search for some agencies. This statement

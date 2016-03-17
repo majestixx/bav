@@ -1,4 +1,3 @@
-#!/bin/env php
 <?php
 /**
  * BAV updater for the Bundesbank bank data file.
